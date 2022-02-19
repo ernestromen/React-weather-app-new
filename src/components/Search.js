@@ -67,7 +67,7 @@ updateCity(prop.searchInput)
     return (
 
 
-        <div className='Search'>
+        <div style={{marginBottom:'10px'}} className='Search'>
         <form onSubmit={handleSubmit}>
       <label>
     
