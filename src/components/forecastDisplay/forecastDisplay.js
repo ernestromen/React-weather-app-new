@@ -9,7 +9,7 @@ export const ForecastDisplay = () => {
 
 // get city info
 const getCity = async (city) => {
-    const base = 'http://dataservice.accuweather.com/locations/v1/cities/search';
+    const base = 'dataservice.accuweather.com/locations/v1/cities/search';
     const query = `?apikey=${key}&q=${city}`;
     const result = await fetch(base+query);
 const data = await result.json();
@@ -18,7 +18,7 @@ return data;
 
 //=====Getting the weather stats===//
   const getWeather = async(id)=>{
-    const base = 'http://dataservice.accuweather.com/currentconditions/v1/';
+    const base = 'dataservice.accuweather.com/currentconditions/v1/';
     const query = `${id}?apikey=${key}`;
     
     const response = await fetch(base+query);
@@ -33,7 +33,7 @@ return data;
 //===Location key api===//
 
   const getLocation = async(id)=>{
-    const base = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/';
+    const base = 'dataservice.accuweather.com/forecasts/v1/daily/5day/';
     const query = `${id}?apikey=${key}`;
 //fucking 503 error    
     const response = await fetch(base+query);
